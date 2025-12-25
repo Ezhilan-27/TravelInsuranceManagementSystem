@@ -1,0 +1,53 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>@ViewData["Title"] - Admin</title>
+
+    <link rel="stylesheet" href="~/css/admin.css" />
+</head>
+<body>
+    <div class="app">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="brand">
+                <span class="brand-dot"></span>
+                <span class="brand-text">Admin</span>
+            </div>
+
+            <nav class="nav">
+                <a href="/Admin/Dashboard" class="nav-item">📊 Dashboard</a>
+                <a href="/Admin/Policies" class="nav-item">📄 Policies</a>
+                <a href="/Admin/Claims" class="nav-item">🧾 Claims</a>
+                <a href="/Admin/Payments" class="nav-item">💳 Payments</a>
+            </nav>
+
+            <div class="nav-bottom">
+                <a href="/Admin/Policies" class="cta">+ Create Policy</a>
+            </div>
+        </aside>
+
+        <!-- Main -->
+        <main class="main">
+            <header class="topbar">
+                <div class="search">
+                    <input type="text" placeholder="Search..." />
+                </div>
+                <div class="user">
+                    <div class="avatar">SJ</div>
+                </div>
+            </header>
+
+            <section class="page">
+                @RenderBody()
+            </section>
+        </main>
+    </div>
+
+    <script src="~/js/admin.js"></script>
+</body>
+</html>

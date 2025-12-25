@@ -1,0 +1,85 @@
+﻿@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    ViewData["Title"] = "Policies";
+}
+
+<h2 class="page-title">Policies</h2>
+
+<div class="filters mb-12">
+    <select class="select">
+        <option>All Status</option>
+        <option>Active</option>
+        <option>Expired</option>
+        <option>Cancelled</option>
+    </select>
+    <select class="select">
+        <option>Country</option>
+        <option>Italy</option>
+        <option>Japan</option>
+        <option>Spain</option>
+        <option>United Kingdom</option>
+        <option>Canada</option>
+    </select>
+    <select class="select">
+        <option>Coverage Type</option>
+        <option>Medical</option>
+        <option>Trip Cancellation</option>
+        <option>Lost Luggage</option>
+    </select>
+    <input class="input" placeholder="From" />
+    <input class="input" placeholder="To" />
+</div>
+
+<div class="row-between mb-12">
+    <button class="btn btn-primary">+ Create Policy</button>
+    <button class="btn btn-outline">Apply Filters</button>
+</div>
+
+<div class="card">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Policy Number</th>
+                <th>Country</th>
+                <th>Start Date</th>
+                <th>End Date</th>
+                <th>Plan</th>
+                <th>Policy Status</th>
+                <th>Claim Status</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>P01042</td>
+                <td>Italy</td>
+                <td>2023-05-01</td>
+                <td>2023-05-15</td>
+                <td>Basic</td>
+                <td><span class="badge badge-approved">Active</span></td>
+                <td><span class="badge badge-open">Open</span></td>
+                <td>#View<a> · #Edit</a></td>
+            </tr>
+            <tr>
+                <td>P01037</td>
+                <td>Japan</td>
+                <td>2023-08-10</td>
+                <td>2023-09-25</td>
+                <td>Premium</td>
+                <td><span class="badge badge-pending">Expired</span></td>
+                <td><span class="badge badge-rejected">Rejected</span></td>
+                <td>#View<a> · #Edit</a></td>
+            </tr>
+            <tr>
+                <td>P01016</td>
+                <td>United Kingdom</td>
+                <td>2024-01-05</td>
+                <td>2024-01-14</td>
+                <td>Premium</td>
+                <td><span class="badge badge-approved">Active</span></td>
+                <td><span class="badge badge-open">Approve</span></td>
+                <td>#View<a> · #Edit</a></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

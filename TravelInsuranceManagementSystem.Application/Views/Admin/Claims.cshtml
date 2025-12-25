@@ -1,0 +1,74 @@
+﻿@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    ViewData["Title"] = "Claims";
+}
+
+<h2 class="page-title">Claims</h2>
+
+<div class="filters mb-12">
+    <select class="select">
+        <option>All Status</option>
+        <option>Open</option>
+        <option>Approved</option>
+        <option>Rejected</option>
+    </select>
+    <select class="select">
+        <option>Coverage Type</option>
+        <option>Medical</option>
+        <option>Trip Cancellation</option>
+        <option>Lost Luggage</option>
+    </select>
+    <div></div>
+    <div></div>
+    <input class="input" placeholder="Search..." />
+</div>
+
+<div class="row-between mb-12">
+    <button class="btn btn-outline">Apply Filters</button>
+</div>
+
+<div class="card">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Policy ID</th>
+                <th>Plan</th>
+                <th>Coverage Type</th>
+                <th>Amount</th>
+                <th>Date</th>
+                <th>Status</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>P01842</td>
+                <td>Basic</td>
+                <td>Medical</td>
+                <td>$5,500</td>
+                <td>2023-05-10</td>
+                <td><span class="badge badge-open">Open</span></td>
+                <td><a>#View</a></td>
+            </tr>
+            <tr>
+                <td>P01037</td>
+                <td>Premium</td>
+                <td>Trip Cancellation</td>
+                <td>$2,200</td>
+                <td>2023-09-01</td>
+                <td><span class="badge badge-approved">Approved</span></td>
+                <td><a>#View</a></td>
+            </tr>
+            <tr>
+                <td>P01016</td>
+                <td>Premium</td>
+                <td>Medical</td>
+                <td>$3,200</td>
+                <td>2024-01-17</td>
+                <td><span class="badge badge-rejected">Rejected</span></td>
+                <td>#View</a></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
